@@ -4,8 +4,6 @@ package edu.cofc.csci230;
 /**
  * Singly LinkedList Data Structure
  * 
- * @author CSCI 230: Data Structures and Algorithms Fall 2017
- *
  * @param <AnyType>s
  */
 public class SinglyLinkedList<AnyType extends Comparable<AnyType>> implements List<AnyType> {
