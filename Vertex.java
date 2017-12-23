@@ -2,8 +2,6 @@ package edu.cofc.csci230;
 
 /**
  * Vertex Class Definition
- * 
- * @author CSCI 230: Data Structures and Algorithms Fall 2017
  *
  * @param <AnyType>
  */
