@@ -233,11 +233,7 @@ public class SinglyLinkedList<AnyType extends Comparable<AnyType>> implements Li
      */
     public void swap( int i, int j )  throws IndexOutOfBoundsException {
         
-        /**
-         * -------------------------------------------
-         * TODO: You fully implement this method
-         * 
-         */
+      
     	if(i < 0 || i >= size() || j < 0 || j > size() || j == i ){
     		throw new IndexOutOfBoundsException();
     	}else{
@@ -288,9 +284,7 @@ public class SinglyLinkedList<AnyType extends Comparable<AnyType>> implements Li
      */
     public static void main( String[] args ) {
                 
-        // -------------------------------------
-        // Put your test cases here
-        // -------------------------------------
+     
     	SinglyLinkedList<Integer> list = new SinglyLinkedList<Integer>();
     	
        
