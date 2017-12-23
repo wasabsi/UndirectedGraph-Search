@@ -4,14 +4,6 @@ import java.util.NoSuchElementException;
 
 /**
  * First In First Out (FIFO) Queue
- *
- * Queue interface that "closely" resembles the Queue interface
- * defined in the java.util package, see link below.
- * 
- * http://docs.oracle.com/javase/7/docs/api/java/util/Queue.html
- * 
- * @author CSCI 230: Data Structures and Algorithms Fall 2017
- *
  * @param <AnyType>
  */
 public interface Queue<AnyType> {
