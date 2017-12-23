@@ -5,8 +5,6 @@ package edu.cofc.csci230;
  * node in front of it) to be used in a singly 
  * linked list linear data structure
  * 
- * @author CSCI 230: Data Structures and Algorithms Fall 2017
- *
  * @param <AnyType>
  */
 public class Node<AnyType extends Comparable<AnyType>> {
