@@ -6,12 +6,6 @@ import java.util.EmptyStackException;
  * A LIFO stack that has constant time complexity O(1) for
  * all three stack interface methods (i.e., push, pop, and 
  * peek).
- * 
- * This data structure was discussed in class along with the 
- * operations, please review your notes.
- * 
- * @author CSCI 230: Data Structures and Algorithms Fall 2017
- *
  * @param <AnyType>
  */
 public class ConstantTimeStack<AnyType extends Comparable<AnyType>> implements Stack<AnyType> {
@@ -29,14 +23,6 @@ public class ConstantTimeStack<AnyType extends Comparable<AnyType>> implements S
 	 */
 	public void push(AnyType t) {
 		
-		/**
-         * -------------------------------------------
-         * TODO: You fully implement this method
-         * 
-         * Note: Your push solution must be a constant 
-         * time O(1) operation
-         * 
-         */
 		list.add(0,t);
 		
 		
@@ -52,14 +38,7 @@ public class ConstantTimeStack<AnyType extends Comparable<AnyType>> implements S
 	 */
 	public AnyType pop() throws EmptyStackException {
 		
-		/**
-         * -------------------------------------------
-         * TODO: You fully implement this method
-         * 
-         * Note: Your pop solution must be a constant 
-         * time O(1) operation
-         * 
-         */
+
 		
 		return list.remove(0);
 		//size-1
@@ -77,14 +56,6 @@ public class ConstantTimeStack<AnyType extends Comparable<AnyType>> implements S
 	 */
 	public AnyType peek() throws EmptyStackException {
 		
-		/**
-         * -------------------------------------------
-         * TODO: You fully implement this method
-         * 
-         * Note: Your peek solution must be a constant 
-         * time O(1) operation
-         * 
-         */
 		
 		if (list.size()==0){
 			throw new EmptyStackException();
@@ -103,11 +74,7 @@ public class ConstantTimeStack<AnyType extends Comparable<AnyType>> implements S
 	 */
 	public static void main( String[] args ) {
 		
-		/**
-         * -------------------------------------------
-         * TODO: You put your test cases here
-         * 
-         */
+	
 		ConstantTimeStack<Integer> test = new ConstantTimeStack<Integer>();
 		test.push(3);
 		
