@@ -9,14 +9,10 @@ package edu.cofc.csci230;
  *	2. bubble sort
  *	3. insertion sort
  * 
- * @author CSCI 230: Data Structures and Algorithms Fall 2017
- *
  */
 public class Utils {
 	
-	/**
-	 * 
-	 */
+	
 	private Utils() {
 		
 	} // end private constructor
@@ -27,14 +23,7 @@ public class Utils {
 	 */
 	public static <AnyType extends Comparable> void selectionSort( List<AnyType> list ) throws IndexOutOfBoundsException {
 		
-		/*
-		 * TODO:
-		 * --------------------------------------
-		 * Implement insertion sort algorithm as
-		 * described in class and as provided in 
-		 * this coding assignment.
-		 * 
-		 */
+		
 		for (int i = 0; i<list.size()-1; i++){
 			int min = i;
 			for (int j=i+1; j<list.size(); j++){
@@ -57,14 +46,7 @@ public class Utils {
 	 */
 	public static <AnyType extends Comparable> void bubbleSort( List<AnyType> list ) throws IndexOutOfBoundsException {
 		
-		/*
-		 * TODO:
-		 * --------------------------------------
-		 * Implement insertion sort algorithm as
-		 * described in class and as provided in 
-		 * this coding assignment.
-		 * 
-		 */
+		
 		
 		for (int i=0; i<list.size()-1; i++){
 			for(int j=0; j<list.size()-1-i; j++){
@@ -84,14 +66,7 @@ public class Utils {
 	 */
 	public static <AnyType extends Comparable> void insertionSort( List<AnyType> list ) throws IndexOutOfBoundsException {
 		
-		/*
-		 * TODO:
-		 * --------------------------------------
-		 * Implement insertion sort algorithm as
-		 * described in class and as provided in 
-		 * this coding assignment.
-		 * 
-		 */
+	
 		
 		for(int i =1; i< list.size();i++){
 			AnyType v = list.get(i);
