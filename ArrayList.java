@@ -2,9 +2,6 @@ package edu.cofc.csci230;
 
 /**
  * ArrayList Data Structure
- * 
- * @author CSCI 230: Data Structures and Algorithms Fall 2017
- *
  * @param <AnyType>
  */
 public class ArrayList<AnyType extends Comparable<AnyType>> implements List<AnyType> {
@@ -78,11 +75,7 @@ public class ArrayList<AnyType extends Comparable<AnyType>> implements List<AnyT
      */
     public void set(int index, AnyType t) throws IndexOutOfBoundsException {
         
-        /**
-         * -------------------------------------------
-         * TODO: You fully implement this method
-         * 
-         */
+      
         
         if ( index < 0 || index >= size )
             throw new IndexOutOfBoundsException();
@@ -227,11 +220,6 @@ public class ArrayList<AnyType extends Comparable<AnyType>> implements List<AnyT
      */
     public void swap( int i, int j )  throws IndexOutOfBoundsException {
         
-        /**
-         * -------------------------------------------
-         * TODO: You fully implement this method
-         * 
-         */
     	
     	
     	if(i < 0 || i >= size() || j < 0 || j >= size() || i == j){
@@ -290,11 +278,7 @@ public class ArrayList<AnyType extends Comparable<AnyType>> implements List<AnyT
      */
     public static void main( String[] args ) {
         
-        /**
-         * -------------------------------------------
-         * TODO: Put your test cases here
-         * 
-         */
+      
     	ArrayList<Integer> list = new ArrayList<Integer>();
     	
     	
