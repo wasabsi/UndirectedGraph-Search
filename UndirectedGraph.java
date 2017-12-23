@@ -6,8 +6,6 @@ import java.util.NoSuchElementException;
 /**
  * Undirected and unweighted graph data structure.
  * 
- * 
- * @author CSCI 230: Data Structures and Algorithms Fall 2017
  *
  * @param <AnyType>
  */
@@ -22,9 +20,7 @@ public class UndirectedGraph<AnyType extends Comparable<AnyType>> {
 	 */
 	private List<Vertex<AnyType>> vertex_adjacency_list = null;
 
-	/**
-	 * 
-	 */
+	
 	public UndirectedGraph() {
 
 		vertex_adjacency_list = new ArrayList<Vertex<AnyType>>();
@@ -41,30 +37,6 @@ public class UndirectedGraph<AnyType extends Comparable<AnyType>> {
 	 */
 	public Boolean addEdge(AnyType vertex_value_A, AnyType vertex_value_B) throws VertexException {
 
-		// ------------------------------------
-		// Basic steps:
-		// ------------------------------------
-		// 1) For Vertex A and B, check to see if the vertex exits in the
-		// vertex_adjacency_list. If not, then add new vertex (with given
-		// value) to the vertex_adjacency_list.
-		// 2) In Vertex class, check if Vertex B is in Vertex A's
-		// adjacent_vertex_list and vice versa (i.e. an edge exists). If
-		// edge already exists, then return false, otherwise goto step 3.
-		// 3) Add Vertex B to Vertex A's adjacent_vertex_list and vice versa.
-		// Lastly, return true indicating the edge was successfully added.
-		
-		// 1) For each vertex, check to see if the vertex exists in
-		// the vertex_adjacency_list. If not, return false indicated
-		// the edge does not exist. Otherwise goto step 2.
-		// 2) In Vertex class, check to see if Vertex B is in Vertex A's
-		// adjacent_vertex_list and vice versa (i.e. an edge exists).
-		// If the edge does not exist return false, otherwise goto
-		// step 3.
-		// ----------------------------
-		// TODO: Add your code here
-		// ----------------------------
-		
-		
 
 		boolean vertex_A_exist = false;
 		boolean vertex_B_exist = false;
@@ -141,28 +113,7 @@ public class UndirectedGraph<AnyType extends Comparable<AnyType>> {
 	 */
 	public Boolean removeEdge(AnyType vertex_value_A, AnyType vertex_value_B) throws VertexException {
 
-		// ------------------------------------
-		// Basic steps:
-		// ------------------------------------
-		// 1) For each vertex, check to see if the vertex exists in
-		// the vertex_adjacency_list. If not, return false indicated
-		// the edge does not exist. Otherwise goto step 2.
-		// 2) In Vertex class, check to see if Vertex B is in Vertex A's
-		// adjacent_vertex_list and vice versa (i.e. an edge exists).
-		// If the edge does not exist return false, otherwise goto
-		// step 3.
-		// 3) In the Vertex class, remove Vertex B from Vertex A's
-		// adjacent_vertex_list and vice versa, and then goto step 4.
-		// Does not exist and return false, otherwise proceed to step 4.
-		// 4) If number of adjacent vertices for Vertex A is zero, then
-		// remove from the vertex_adjacency_list. Likewise, if the 
-		// number of adjacent vertices for Vertex B is zero, then
-		// remove from _adjacency_list. Lastly, return true indicating
-		// the edge was successfully removed.
-
-		// ----------------------------
-		// TODO: Add your code here
-		// ----------------------------
+		
 		boolean vertex_A_exist = false;
 		boolean vertex_B_exist = false;
 		boolean vertex_A_and_B_exist = false;
@@ -223,17 +174,6 @@ public class UndirectedGraph<AnyType extends Comparable<AnyType>> {
 	 * Depth first search (DFS) using stack data structure. Specifically, the
 	 * ConstantTimeStack class.
 	 * 
-	 * Must be an iterative solution.
-	 * 
-	 * Return a String that shows when each vertex was visited during the DFS.
-	 * String format: <Vertex Value>:<Visited Count>\n
-	 * 
-	 * Notes: (1) Don't forget to mark each vertex as not visited before the
-	 * search begins. (2) If the start_vertex value does not exist in the
-	 * undirected graph throw a new VertexException. (3) Vertex must be pushed
-	 * onto the Stack in the reverse order they were added to the
-	 * adjacent_vertex_list  (4) See assignment for DFS
-	 * String format example.
 	 * 
 	 * @param start_vertex
 	 * @return
@@ -243,11 +183,7 @@ public class UndirectedGraph<AnyType extends Comparable<AnyType>> {
 
 		StringBuffer buffer = new StringBuffer();
 
-		// ----------------------------
-		// TODO: Add your code here
-		// ----------------------------
 
-		
 
 		return buffer.toString();
 
@@ -260,14 +196,6 @@ public class UndirectedGraph<AnyType extends Comparable<AnyType>> {
 	 * 
 	 * Must be an iterative solution.
 	 * 
-	 * Return a String that shows when each vertex was visited during the BFS.
-	 * String format: <Vertex Value>:<Visited Count>\n
-	 * 
-	 * Notes: (1) Don't forget to mark each vertex as not visited before the
-	 * search begins. (2) If the start_vertex value does not exist throw a new
-	 * VertexException. (4) Vertex must be added to the Queue in the same order
-	 * they were added to the adjacent_vertex_list (3) See assignment for BFS
-	 * String format example.
 	 * 
 	 * @param start_vertex
 	 * @return
@@ -277,9 +205,6 @@ public class UndirectedGraph<AnyType extends Comparable<AnyType>> {
 
 		StringBuffer buffer = new StringBuffer();
 
-		// ----------------------------
-		// TODO: Add your code here
-		// ----------------------------
 		
 		SemiConstantTimeQueue<Vertex<AnyType>> queue = new SemiConstantTimeQueue<Vertex<AnyType>>();
 		
@@ -350,9 +275,7 @@ public class UndirectedGraph<AnyType extends Comparable<AnyType>> {
 	 */
 	public static void main(String[] args) {
 
-		// -----------------------------------------
-		// TODO: Put test cases here
-		// -----------------------------------------
+		
 		UndirectedGraph<Integer> graph = new UndirectedGraph<Integer>();
 		// UndirectedGraph graph = new UndirectedGraph();
 		graph.addEdge( 1, 2 );
