@@ -12,15 +12,7 @@ import java.util.NoSuchElementException;
  * 3) peek: O(1)
  * 
  * Please note: the above time complexities do not factor in
- * capacity resize (grow and shrink) operations. Even though
- * capacity resize operations will occur, for this assignment 
- * you may assume the are negligible.
- * 
- * This data structure was discussed in class along with the 
- * operations, please review your notes.
- * 
- * @author CSCI 230: Data Structures and Algorithms Fall 2017
- *
+ * capacity resize (grow and shrink) operations. 
  * @param <AnyType>
  */
 public class SemiConstantTimeQueue<AnyType extends Comparable<AnyType>> implements Queue<AnyType> {
@@ -41,15 +33,7 @@ public class SemiConstantTimeQueue<AnyType extends Comparable<AnyType>> implemen
 	 */
 	public void add(AnyType t) throws NullPointerException {
 		
-		/**
-         * -------------------------------------------
-         * TODO: You fully implement this method
-         * 
-         * Note: Your add solution must be a constant 
-         * time O(1) operation (*** not considering capacity 
-         * resize operations ***)
-         * 
-         */
+
 		if(t == null){
 			throw new NullPointerException();	
 		}else{
@@ -63,23 +47,12 @@ public class SemiConstantTimeQueue<AnyType extends Comparable<AnyType>> implemen
 	 * Retrieves and removes the head of the queue in
 	 * linear time O(n).
 	 * 
-	 * Hint: shift operations will make this a linear time
-	 * operation.
-	 * 
 	 * @return the head of the queue
 	 * @throws NoSuchElementException - if this queue is empty
 	 */
 	public AnyType remove() throws NoSuchElementException {
 		
-		/**
-         * -------------------------------------------
-         * TODO: You fully implement this method
-         * 
-         * Note: Your push solution must be a linear 
-         * time O(n) operation. See hint above.
-         * 
-         *
-         */
+	
 		if (list.isEmpty()){
 			throw new NoSuchElementException();
 		}else{
@@ -98,14 +71,7 @@ public class SemiConstantTimeQueue<AnyType extends Comparable<AnyType>> implemen
 	 */
 	public AnyType peek() {
 		
-		/**
-         * -------------------------------------------
-         * TODO: You fully implement this method
-         * 
-         * Note: Your add solution must be a constant 
-         * time O(1) operation 
-         * 
-         */
+	
 		return list.get(0);
 		
 		
@@ -118,11 +84,7 @@ public class SemiConstantTimeQueue<AnyType extends Comparable<AnyType>> implemen
 	 */
 	public static void main(String[] args) {
 		
-		/**
-         * -------------------------------------------
-         * TODO: You put your test cases here
-         * 
-         */
+	
 		SemiConstantTimeQueue<Integer> test = new SemiConstantTimeQueue<Integer>();
 		test.add(3);
 		test.add(4);
